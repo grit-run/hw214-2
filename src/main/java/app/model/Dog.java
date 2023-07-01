@@ -1,18 +1,34 @@
 package app.model;
 
-public class Dog extends Animal{
+import org.springframework.stereotype.Component;
 
-    private String barking;
-    public String getBarking() {
-        return barking;
+@Component
+public class Dog extends Animal {
+
+    private String voicing;
+
+    public Dog(String voicing) {
+        this.voicing = voicing;
     }
 
-    public void setBarking(String barking) {
-        this.barking = barking;
+    void say() {
+        System.out.println(voicing);
+    }
+
+    public String getVoicing() {
+        return voicing;
+    }
+
+    public void setVoicing(String voicing) {
+        this.voicing = voicing;
+    }
+
+    void voice() {
+        System.out.println(voicing);
     }
 
     @Override
     public String toString() {
-        return "Dog barking";
+        return "Im a Dog";
     }
 }
