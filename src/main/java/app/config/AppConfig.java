@@ -28,5 +28,4 @@ public class AppConfig {
         Timer timer = new Timer();
         return timer;
     }
-
 }
